@@ -15,7 +15,7 @@ export default function MiniCalendar(props: {
 }) {
   const { selectRange, ...rest } = props;
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [value, onChange] = useState(new Date());
+  const [value] = useState(new Date());
   return (
     <Card
       alignItems="center"

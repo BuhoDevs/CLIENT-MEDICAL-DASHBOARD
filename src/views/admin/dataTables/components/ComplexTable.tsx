@@ -91,7 +91,7 @@ export default function ComplexTable(props: { tableData: any }) {
                 ? "red.500"
                 : info.getValue() === "Error"
                 ? "orange.500"
-                : null
+                : undefined
             }
             as={
               info.getValue() === "Approved"
@@ -100,7 +100,7 @@ export default function ComplexTable(props: { tableData: any }) {
                 ? MdCancel
                 : info.getValue() === "Error"
                 ? MdOutlineError
-                : null
+                : undefined
             }
           />
           <Text color={textColor} fontSize="sm" fontWeight="700">
@@ -153,7 +153,7 @@ export default function ComplexTable(props: { tableData: any }) {
     }),
   ];
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [data, setData] = React.useState(() => [...defaultData]);
+  const [data] = React.useState(() => [...defaultData]);
   const table = useReactTable({
     data,
     columns,
