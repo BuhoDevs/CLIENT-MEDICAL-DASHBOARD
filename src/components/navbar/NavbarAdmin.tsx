@@ -7,7 +7,6 @@ import {
   BreadcrumbLink,
   Flex,
   Link,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
@@ -21,7 +20,7 @@ export default function AdminNavbar(props: {
   fixed: boolean;
   onOpen: (...args: any[]) => any;
 }) {
-  const [scrolled, setScrolled] = useState(false);
+  const [, setScrolled] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", changeNavbar);

@@ -127,7 +127,7 @@ export default function CheckTable(props: { tableData: any }) {
     }),
   ];
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [data, setData] = React.useState(() => [...defaultData]);
+  const [data] = React.useState(() => [...defaultData]);
   const table = useReactTable({
     data,
     columns,
